@@ -1,0 +1,18 @@
+#include "sendaction.h"
+
+SendAction::SendAction()
+{
+    qDebug() << "constr SendAction";
+}
+
+QString SendAction::parseActionParameters(QDomNode parameters_node)
+{
+    QString test = "123123";
+    addVariable(test);
+    return formDataPack("5. SendAction");
+}
+
+QString SendAction::formDataPack(QString exec_attributes)
+{
+    return exec_attributes;
+}

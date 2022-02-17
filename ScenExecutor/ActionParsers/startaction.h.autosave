@@ -1,0 +1,17 @@
+#ifndef STARTACTION_H
+#define STARTACTION_H
+
+#include <QObject>
+
+#include "actionparser.h"
+
+class StartAction : public ActionType
+{
+    Q_OBJECT
+public:
+    StartAction();
+    QString parseActionParameters(QDomElement parameters_node);
+    QString formDataPack(QString exec_attributes);
+};
+
+#endif // STARTACTION_H

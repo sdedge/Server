@@ -1,0 +1,17 @@
+#ifndef DELETEACTION_H
+#define DELETEACTION_H
+
+#include <QObject>
+
+#include "actionparser.h"
+
+class DeleteAction : public ActionType
+{
+    Q_OBJECT
+public:
+    DeleteAction();
+    QString parseActionParameters(QDomElement parameters_node);
+    QString formDataPack(QString exec_attributes);
+};
+
+#endif // DELETEACTION_H

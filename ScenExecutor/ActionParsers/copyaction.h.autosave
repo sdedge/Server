@@ -1,0 +1,19 @@
+#ifndef COPYACTION_H
+#define COPYACTION_H
+
+#include <QObject>
+
+#include "actionparser.h"
+
+class CopyAction : public ActionType
+{
+    Q_OBJECT
+public:
+    CopyAction();
+    QString parseActionParameters(QDomElement parameters_node) override;
+    
+private:
+    QString formDataPack(QString source, QString target);
+};
+
+#endif // COPYACTION_H

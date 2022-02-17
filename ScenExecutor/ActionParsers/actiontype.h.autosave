@@ -1,0 +1,24 @@
+#ifndef ACTIONTYPE_H
+#define ACTIONTYPE_H
+
+#include <QObject>
+#include <QDomDocument>
+
+#include <QDebug>
+
+class ActionType: public QObject
+{
+    Q_OBJECT
+public:
+    ActionType();
+    virtual ~ActionType();
+
+    bool addVariable(QString &attribute);
+    virtual QString parseActionParameters(QDomElement parameters_element) = 0;
+
+
+private:
+    ActionType *m_action_type;
+};
+
+#endif // ACTIONTYPE_H

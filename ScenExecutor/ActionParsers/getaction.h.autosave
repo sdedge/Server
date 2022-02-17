@@ -1,0 +1,17 @@
+#ifndef GETACTION_H
+#define GETACTION_H
+
+#include <QObject>
+
+#include "actionparser.h"
+
+class GetAction : public ActionType
+{
+    Q_OBJECT
+public:
+    GetAction();
+    QString parseActionParameters(QDomElement parameters_node);
+    QString formDataPack(QString exec_attributes);
+};
+
+#endif // GETACTION_H

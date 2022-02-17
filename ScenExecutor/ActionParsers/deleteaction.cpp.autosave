@@ -1,0 +1,18 @@
+#include "deleteaction.h"
+
+DeleteAction::DeleteAction()
+{
+    qDebug() << "constr DeleteAction";
+}
+
+QString DeleteAction::parseActionParameters(QDomNode parameters_node)
+{
+    QString test = "123123";
+    addVariable(test);
+    return formDataPack("3. DeleteAction");
+}
+
+QString DeleteAction::formDataPack(QString exec_attributes)
+{
+    return exec_attributes;
+}

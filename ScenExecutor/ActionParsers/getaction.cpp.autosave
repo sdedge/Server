@@ -1,0 +1,18 @@
+#include "getaction.h"
+
+GetAction::GetAction()
+{
+    qDebug() << "constr GetAction";
+}
+
+QString GetAction::parseActionParameters(QDomNode parameters_node)
+{
+    QString test = "123123";
+    addVariable(test);
+    return formDataPack("4. GetAction");
+}
+
+QString GetAction::formDataPack(QString exec_attributes)
+{
+    return exec_attributes;
+}
